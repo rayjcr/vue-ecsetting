@@ -1,0 +1,108 @@
+#app{width:100%; height:100%;}
+
+.wrap{ width:100%; height:100%; overflow: hidden;}
+.flexColumn {display: flex;flex-direction: column; }
+.flexRow {display: flex;flex-direction: row; }
+.flexBox {flex: 1; overflow: hidden; }
+
+.Container{width:100%; height:100%; background:#e6e6e6;position: relative;}
+.clear:after{content:"\20";display:block;height:0;clear:both}
+.graybg{background-color:#eff1f3;}
+.whitebg{background-color:#FFF;}
+.mt20{margin-top:.2rem;}
+
+header{width:100%; height:.9rem; position:relative; background-color:#FFF; top:0; left:0; border-bottom:1px solid #e0e0e0;}
+footer{width:100%; height:1rem; position:relative;}
+
+.h-back{width:.9rem; height:.9rem; font-size:.5rem; color:#528ef2; text-align: center; line-height:.9rem;}
+.h-tit{width:50%; left:25%; top:0; font-size:.34rem; color:#000; text-align: center; line-height:.9rem; position: absolute;}
+.h-confirm{width:1rem; height:.9rem; line-height:.9rem; position:absolute; top:0; right:0;font-size:.32rem; color:#4787f1; text-align: center;}
+.h-confirm.nosel{color:#e0e0e0;}
+
+/*选择项的样式*/
+.SelList{padding-left:.25rem; background-color:#FFF;}
+.SelUnit{min-height:.88rem; border-bottom:1px solid #e6e6e6;}
+.SelUnit:last-child{border-bottom:none;}
+.SelTit{width:2.4rem; float:left; font-size:.3rem; color:#000; line-height:.88rem;}
+.SelCont{overflow:hidden; line-height:.88rem; position: relative; height:.88rem; text-align: right; font-size:.28rem; padding-right:.2rem;}
+.SelCont i{margin-left:.1rem; color:#444; position:absolute;top:.14rem; right:0;}
+.SelCont .placeholder{color:#aaa; position: relative; padding-right:.4rem;}
+.SelCont .val{color:#666; position:relative;padding-right:.4rem;white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
+
+/*多项选择样式*/
+.Allcheckbox{height:1rem; border-bottom:1px solid #e0e0e0; padding:0 .25rem;}
+.Allcheckbox .alltit{float:left; padding-left:.6rem; position: relative; z-index: 10; font-size:.32rem; color:#333; line-height:1rem; width: 80%;}
+.checkList{display: block; transition:.2s all;}
+.checkList.on{display:block;}
+.checkbox-group input[type='checkbox']{visibility: hidden;}
+.checkbox{padding-left:.25rem; height:1rem; line-height:1rem;}
+.checkbox .cb-l{border-bottom:1px solid #e0e0e0; font-size:.32rem; color:#333;}
+.checkbox .cb-l::before,.Allcheckbox:before{content:'\20'; background:url(../../src/assets/images/dot-sel.png); width:.46rem; height:.46rem; position:absolute; display: block; float: left; background-size:100% 100%; margin-top:.27rem; margin-right:.2rem}
+.checkbox:last-child .cb-l{border-bottom:none;}
+.checkbox .cb-l span{padding-left: .6rem;}
+.checkbox.check .cb-l::before,.Allcheckbox.check:before{background:url(../../src/assets/images/dot-seled.png);background-size:100% 100%;}
+
+/*单项选择样式*/
+.radio-group{background-color:#FFF;}
+.radioList{display: block; transition:.2s all;}
+.radio-group input[type='radio']{visibility: hidden;}
+.radiobox{padding-left:.25rem; height:1rem; line-height:1rem;color:#333;}
+.radiobox .cb-l{border-bottom:1px solid #e0e0e0; font-size:.32rem; padding-right:.3rem;}
+.radiobox.cur{color:#4787f1;}
+.radiobox .icons{float:right; line-height:1rem; font-size:.4rem; font-weight:bold; display: none;}
+.radiobox.cur .icons{display:block;}
+
+/*多项选择样式*/
+
+
+
+
+/*设置亮度&音量*/
+.settingTit{height:.6rem; background-color:#eff1f3; font-size:.26rem; color:#999; padding-left:.2rem; line-height:.6rem}
+.settingMain{padding-left:.25rem;}
+.settingBox{border-bottom:1px solid #e0e0e0; padding:.25rem 0; padding-right:.25rem; width:100%;}
+.settingBox .tit{font-size:.3rem; color:#000; float: left; min-height:.4rem; line-height:.4rem;}
+.settingBox .tit span{font-size:.22rem; color:#aaa;}
+.settingBox .cont{height:.4rem; text-align: right;}
+.lightLow{float:left;font-size:.4rem; color:#999}
+.lightHigh{float:right;font-size:.4rem}
+.voiceLow{float:left;font-size:.5rem; color:#999}
+.voiceHigh{float:right;font-size:.5rem}
+.lightSlider{padding:0 .3rem; float:left; width:6.5rem; margin-top:.25rem}
+.voiceSlider{padding:0 .3rem; float:left; width:6.5rem; margin-top:.3rem}
+/*滑块*/
+.SliderMain{ width:100%; height:.12rem; border-radius:.06rem; background-color:#e0e0e0; position: relative;}
+.SliderIng{height:.12rem; border-radius:.06rem; background-color:#4787f1; position:relative;float: left;}
+.SliderBlock{width:.5rem; height:.5rem; border-radius:100%;box-shadow:0 3px 3px rgba(100, 100, 100, .4); background-color:#FFF; top:-.2rem; position:absolute;}
+
+/*设置时间控件*/
+.SetOpenTime{width:100%; height:4.6rem; padding:.5rem 0; background-color:#FFF;}
+.SetTimeDataBox{width:100%; height:100%; overflow: hidden;position: relative;}
+.cusSelBox{width:33.33%; float:left; height:100%; overflow: auto; -webkit-mask-image:url(../../src/assets/images/tm.png); -webkit-mask-size:auto 100%}
+.cusSelBox.leftside{width:1.3rem;}
+.cusSelBox li{height:1.2rem; width:100%; line-height:1.2rem; font-size:.48rem;color:#999; text-align: center; font-family:'Microsoft YaHei', 'Droid Sans Fallback', SimHei, Arial, Helvetica, tahoma, sans-serif;}
+.cusSelBox li.cur{font-size:.7rem; color:#4787f1;}
+.cusSelBox.leftside li{text-align: right; padding-right:.2rem}
+.SetTimeDataBox .splitxt{float:left; font-size:.28rem; color:#4787f1; line-height:3.9rem;}
+/*.curbg{width:100%; height:100%; position: absolute; top:0; left:0;background: -webkit-linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, 0), rgba(255, 255, 255, .5))}*/
+
+/*底部按钮*/
+.FootBtn{width:100%; padding:.2rem; background-color:#FFF; border-top:1px solid #e0e0e0; position:absolute; bottom:0; left: 0;}
+.FootBtn .lbtn{width:100%; height:.8rem; font-size:.32rem}
+.silderUp{float:right; font-size:.26rem; color:#aaa; line-height:1rem;}
+.silderUp .icons{transition: .2s all;}
+.silderUp.Down .icons{transform:rotate(180deg);}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
