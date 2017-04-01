@@ -1,5 +1,7 @@
 # a-weclasscards
 
+>基于VUE2.0 + iviewui2.0 +vuex 的电子班牌微信端后台控制
+
 > A Vue.js project
 
 ## Build Setup
